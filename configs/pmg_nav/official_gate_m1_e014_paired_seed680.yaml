@@ -1,0 +1,27 @@
+# Paired e014 diagnostic gate (water-dispenser route).
+# The compatibility runner derives episode_seed as seed + episode index;
+# 666 + 14 = 680.  Keep this profile separate from the locked e041 run.
+seed: 666
+navigation_method: ticvla
+success_threshold: 1.5
+episode_14:
+  # The 500 GB instance does not cache the Hospital USD locally.  Use the
+  # same official Omniverse asset URL as the upstream DynaNav configs; this
+  # keeps the episode definition identical without fetching TIC-VLA data.
+  scene: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Hospital/hospital.usd
+  start:
+    - 9.75
+    - 2.82
+    - 0.01
+  start_yaw: -145
+  goal:
+    - -4.49
+    - -1.91
+    - 0.01
+  instruction: >-
+    Go straight past the wheelchairs and stop at the water dispenser by the
+    window.
+  timeout: 105
+  num_people: 0
+  official_num_people: 30
+  robot_type: nova_carter

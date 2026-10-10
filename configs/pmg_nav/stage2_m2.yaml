@@ -1,0 +1,12 @@
+seed: 36
+navigation_method: ticvla
+success_threshold: 1.5
+episode_stage2_m2:
+  scene: "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Hospital/hospital.usd"
+  start: [-3.0, -1.2, 0.01]
+  start_yaw: 0.0
+  goal: [9.72, 2.33, 0.01]
+  instruction: "Go straight ahead and stop at the front of the vending machine. Physical memory places the vending machine at world position (11.15, 2.37); the highest-scoring reachable goal is (9.72, 2.33)."
+  timeout: 70
+  num_people: 0
+  robot_type: "nova_carter"

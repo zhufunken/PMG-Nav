@@ -1,0 +1,25 @@
+# Paired e041 gate configuration.
+# The Isaac Sim 6 compatibility runner derives episode_seed as
+# config.seed + episode_index.  Setting seed=666 therefore yields
+# episode_41 -> 707, matching the locked M0 artifact
+# stage2_official_v6_m0_e041.
+seed: 666
+navigation_method: ticvla
+success_threshold: 1.5
+episode_41:
+  scene: ${TICVLA_DYNANAV_ROOT}/assets/office.usd
+  start:
+    - -3.04
+    - 48.1
+    - 0.01
+  start_yaw: -270
+  goal:
+    - -15.5
+    - 54.7
+    - 0.01
+  instruction: >-
+    Go straight down the hallway, turn left at the end, then continue forward
+    to enter the office room. Move inside and stop in front of the desk on the right.
+  timeout: 95
+  num_people: 0
+  robot_type: nova_carter

@@ -1,0 +1,30 @@
+# M1 compact oracle-controller profile.
+#
+# This is intentionally separate from stage2_m1.yaml. It is an upper-bound
+# diagnostic for the PMG goal field, not a learned TIC-VLA improvement claim.
+# Pass the profile switches to the matrix runner:
+#
+#   PMG_ENABLE_GOAL_ADAPTER=0 PMG_ENABLE_VECTOR_ADAPTER=0 \
+#   STAGE2_RUN_PREFIX=stage2_official_m1_simple_oracle_compact \
+#   python scripts/pmg_nav/05_run_official_matrix.py \
+#     --methods M0 M1 M2 M3 --episodes 1 6 11 16 21 26 \
+#     --m1-variant simple_oracle --graph-mode compact \
+#     --max-graph-nodes 8 --max-edges-per-anchor 4
+name: stage2_m1_simple_oracle_compact
+method: M1
+controller: explicit_goal_pursuit
+goal_interface: direct_goal_condition
+enable_goal_adapter: false
+enable_vector_adapter: false
+perception: simulator_usd_oracle
+graph_mode: compact
+max_graph_nodes: 8
+# Ordinary distractor edges per task anchor; required anchor-to-anchor edges
+# are retained even when this bound would otherwise be exceeded.
+max_edges_per_anchor: 4
+min_score: 0.0
+min_standoff_m: 0.75
+stop_radius_m: 0.60
+blend: 1.0
+evaluator_goal_access: false
+upstream_ticvla_modified: false

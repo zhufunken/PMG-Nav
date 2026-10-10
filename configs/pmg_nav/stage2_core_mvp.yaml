@@ -1,0 +1,19 @@
+# Stage 2 core MVP profile.
+#
+# This is deliberately the smallest causal comparison.  M0 is the locked
+# TIC-VLA baseline and M1 builds a single-frame PMG and queries its physical
+# goal field.  Temporal predicted perception (M2), conflict/tool recovery
+# (M3), and RL are follow-up stages and must not be enabled in this profile.
+name: stage2_core_mvp
+complexity: core
+methods:
+  - M0
+  - M1
+m1_variant: strict
+perception: simulator_usd_oracle
+graph_mode: full
+temporal_memory: false
+tools: false
+rl: false
+evaluator_goal_access: false
+upstream_ticvla_modified: false

@@ -1,0 +1,13 @@
+seed: 36
+navigation_method: ticvla
+success_threshold: 1.5
+
+episode_hospital_smoke:
+  scene: "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Hospital/hospital.usd"
+  start: [-3.0, -1.2, 0.01]
+  start_yaw: 0.0
+  goal: [9.72, 2.33, 0.01]
+  instruction: "Go straight ahead and stop at the front of the vending machine."
+  timeout: 70
+  num_people: 20
+  robot_type: "nova_carter"

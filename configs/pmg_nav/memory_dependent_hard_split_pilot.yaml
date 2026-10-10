@@ -1,0 +1,24 @@
+# One short Isaac-6 compatibility pilot for the deterministic memory feeder.
+# The fixture supplies PMG observations; this scene/start/goal remains an
+# ordinary DynaNav episode so the benchmark evaluator is still independent.
+seed: 20260903
+navigation_method: ticvla
+success_threshold: 1.5
+memory_hook_fixture: outputs/stage2/annotation/memory_hard_split_smoke.jsonl
+memory_hook_episode: memory_test_003
+memory_hook_strict_instruction: true
+episode_memory_test_003:
+  scene: https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/5.0/Isaac/Environments/Hospital/hospital.usd
+  start:
+  - -3.0
+  - -1.2
+  - 0.01
+  start_yaw: 0.0
+  goal:
+  - 9.52
+  - 2.33
+  - 0.01
+  instruction: Use the anchor_a to anchor_b relation, verify the reappearing target, then stop 0.5 meters right of the target.
+  timeout: 8
+  num_people: 0
+  robot_type: nova_carter
