@@ -1,5 +1,7 @@
 # PMG-Nav
 
+**English** | [中文](README.zh-CN.md)
+
 Physical Memory Graphs for language-guided robot navigation with metric and
 relational constraints. This repository contains the current research prototype,
 experiment configurations, simulator integration scripts, and regression tests.
