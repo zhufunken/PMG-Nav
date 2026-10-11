@@ -1,0 +1,7 @@
+{
+  "description": "Deterministic smoke case for RSI + PMG memory",
+  "episodes": 2,
+  "output": "outputs/rsi_memory_demo",
+  "online_order": ["retrieve_rule", "retrieve_candidates", "plan_route", "navigate", "observe_feedback", "update_attempt_memory"],
+  "offline_order": ["aggregate_diagnostics", "propose_rule_patch", "validate_patch", "atomic_write_rule_memory"]
+}
